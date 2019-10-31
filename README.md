@@ -5,10 +5,10 @@ This is the pytorch implementation of Paper: Image Inpainting With Learnable Bid
 
 ### Model Architecture
 We propose a Bidirectional Attention model based on the [U-Net](https://arxiv.org/pdf/1611.07004.pdf) architecture.
-<center><embed src="./figs/model_architucture.pdf"></center>
+![model](./figs/model/model_architecture.png)
 
 ### Bidrectional Attention Layer
-<center><embed src="./figs/BidAtentionLayer.png"></center>
+![Layer](./figs/model/BidAtentionLayer.png)
 
 ## Prerequisites
 - Python 3.6
@@ -36,6 +36,81 @@ python test_random_batch.py --dataRoot your_image_path
 ```
 
 ### Some Results
+We suggest that you train our model with a large batch size (>= 48 or so). We re-train our model with batch size 10, the results degrades a little bit, I guess it may be due to the batch-normalization opreation (I would try removing bn from LBAM and see how it affects).
+
+Here are some inpainting results that we train with batch size of 10 on Paris StreetView dataset:
+<table style='float:center'>
+ <tr>
+  <th><B>Input</B></th> <th><B>Results</B></th> <th><B>Ground-Truth</B></th>
+ </tr>
+
+<tr>
+    <td>
+     <img src="./figs/results/input/input_001.png">
+    </td>
+    <td>
+     <img src="./figs/results/ours/ours_001.png">
+    </td>
+    <td>
+     <img src="./figs/results/GT/GT_001.png">
+    </td>
+
+</tr>
+
+<tr>
+    <td>
+     <img src="./figs/results/input/input_002.png">
+    </td>
+    <td>
+     <img src="./figs/results/ours/ours_002.png">
+    </td>
+    <td>
+     <img src="./figs/results/GT/GT_002.png">
+    </td>
+
+</tr>
+
+<tr>
+    <td>
+     <img src="./figs/results/input/input_003.png">
+    </td>
+    <td>
+     <img src="./figs/results/ours/ours_003.png">
+    </td>
+    <td>
+     <img src="./figs/results/GT/GT_003.png">
+    </td>
+
+</tr>
+
+<tr>
+    <td>
+     <img src="./figs/results/input/input_004.png">
+    </td>
+    <td>
+     <img src="./figs/results/ours/ours_004.png">
+    </td>
+    <td>
+     <img src="./figs/results/GT/GT_004.png">
+    </td>
+
+</tr>
+
+<tr>
+    <td>
+     <img src="./figs/results/input/input_005.png">
+    </td>
+    <td>
+     <img src="./figs/results/ours/ours_005.png">
+    </td>
+    <td>
+     <img src="./figs/results/GT/GT_005.png">
+    </td>
+
+</tr>
+
+
+</table>
 
 
 
