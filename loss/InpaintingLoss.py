@@ -97,8 +97,8 @@ class InpaintingLossWithGAN(nn.Module):
 
         prcLoss = 0.0
         for i in range(3):
-            prcLoss += 0.005 * self.l1(feat_output[i], feat_gt[i])
-            prcLoss += 0.005 * self.l1(feat_output_comp[i], feat_gt[i])
+            prcLoss += 0.01 * self.l1(feat_output[i], feat_gt[i])
+            prcLoss += 0.01 * self.l1(feat_output_comp[i], feat_gt[i])
 
         styleLoss = 0.0
         for i in range(3):
