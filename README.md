@@ -38,6 +38,8 @@ python test_random_batch.py --dataRoot your_image_path
 ### Some Results
 We suggest that you train our model with a large batch size (>= 48 or so). We re-train our model with batch size 10, the results degrades a little bit, I guess it may be due to the batch-normalization opreation (I would try removing bn from LBAM and see how it affects).
 
+The pretrained model can be found at [google drive](https://drive.google.com/drive/folders/17DJEp0APDcZoWPIHwMFs78ak59pYlDPw), or [baidu cloud](https://pan.baidu.com/share/init?surl=z9hNEpbhsK2r-TEJbYkuQw) with extract code: mvzh. I made a slight change by setting the bn to false and modify the last tanh from absolute value to (tanh() + 1) / 2.
+
 Here are some inpainting results that we train with batch size of 10 on Paris StreetView dataset:
 <table style='float:center'>
  <tr>
