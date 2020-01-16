@@ -40,7 +40,7 @@ class ForwardAttentionLayer(nn.Module):
 
 # forward attention gather feature activation and batchnorm
 class ForwardAttention(nn.Module):
-    def __init__(self, inputChannels, outputChannels, bn=True, sample='down-4', \
+    def __init__(self, inputChannels, outputChannels, bn=False, sample='down-4', \
         activ='leaky', convBias=False):
         super(ForwardAttention, self).__init__()
 

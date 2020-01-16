@@ -30,7 +30,7 @@ class ReverseMaskConv(nn.Module):
 
 # learnable reverse attention layer, including features activation and batchnorm
 class ReverseAttention(nn.Module):
-    def __init__(self, inputChannels, outputChannels, bn=True, activ='leaky', \
+    def __init__(self, inputChannels, outputChannels, bn=False, activ='leaky', \
         kernelSize=4, stride=2, padding=1, outPadding=0,dilation=1, groups=1,convBias=False, bnChannels=512):
         super(ReverseAttention, self).__init__()
 

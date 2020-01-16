@@ -97,6 +97,6 @@ class LBAMModel(nn.Module):
 
         dcFeatures7 = self.dc7(dcFeatures6)
 
-        output = torch.abs(self.tanh(dcFeatures7))
+        output = (self.tanh(dcFeatures7) + 1) / 2
 
         return output
